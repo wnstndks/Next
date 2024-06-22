@@ -1,31 +1,49 @@
 body {
-    margin : 0;
-    background-color: #303030;
-    color : white
+  margin: 0;
+  background-color: #0d730d;
+  color: white
 }
-   
+
 .title {
   text-align: center;
   margin-top: 150px;
 }
+
 .title-sub {
   text-align: center;
 }
-  
-  .food {
-    margin: 20px auto;
-    width: 200px;
-    background: white;
-    color: black;
-    padding: 20px;
-    border-radius: 5px;
-  } 
-  
-  .navbar {
-    background: white;
-    padding: 20px;
-  }
-  .navbar a {
-    margin-right: 10px;
-    text-decoration: none;
-  } 
+
+
+.brand {
+  margin: 20px auto;
+  width: 200px;
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+
+}
+
+.navbar {
+  background: #0d730d;
+  padding: 20px;
+}
+
+.navbar a {
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  /* nextjs에서는 이미지를 이런식으로 쓰는게 안정적 */
+  width: 100%;
+  height: auto;
+}
+
+.cart-item {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid grey;
+  line-height: 0px;
+}
