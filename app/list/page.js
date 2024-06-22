@@ -1,5 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-
 export default function List() {
   let 상품 = ["Tomatoes", "Pasta", "Coconut"];
   return (
