@@ -11,7 +11,7 @@ export default function List() {
   let 상품 = ["Apple", "Samsung", "Tesla"];
   // 변수 : 데이터 잠깐 저장 가능 = state 데이터 잠깐 저장 가능
   // state가 변경되면 state를 쓰고 있는 html부분도 자동 재덴더링(=자동업데이트)
-  let [수량, 수량변경] = useState(0);
+  let [수량, 수량변경] = useState([0,0,0]);
 
   return (
     <div>
@@ -29,7 +29,7 @@ export default function List() {
             {/* <Image src={apple} className="brand-logo"/> */}
 
             <h4 style={{ textAlign: "center" }}>{a}</h4>
-            <span>{수량}</span>
+            <span>{수량[i]}</span>
 
             {/* 이건 client component에서만 쓸수 있음
               next js는  server component이기에 위에서 'use client'를 써야함 */}
@@ -37,14 +37,22 @@ export default function List() {
             <div className="btn-container">
               <button
                 onClick={() => {
-                  수량변경(수량 + 1);
+                  // 복사를 해야하는 이유 - react에서 state 변경함수 사용시 
+                  // 새state ==기존 state일 경우 굳이 변경X
+                  // ... 은 완전히 독립적인 array 만들어서 복사해줌
+                  let copy=[...수량]
+                  copy[i]++
+                  console.log(copy)
+                  수량변경(copy);
                 }}
               >
                 +
               </button>
               <button
                 onClick={() => {
-                  수량변경(수량 - 1);
+                  let copy=[...수량]
+                  copy[i]--
+                  수량변경(copy);
                 }}
               >
                 -
