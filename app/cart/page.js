@@ -11,10 +11,10 @@ export default function Cart() {
         <h4 className="title">Cart</h4>
         <CartItem item={장바구니[0]}/>
         <CartItem item={장바구니[1]}/>
-        {/* <Hello/> */}
+        {/* <Hello/>
         <Banner content="롯데카드"/>
         <Btn color="red"/>
-        <Btn color="blue"/>
+        <Btn color="blue"/> */}
       </div>
     )
   } 
