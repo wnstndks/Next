@@ -8,10 +8,8 @@ export default async function Home() {
   const client = await connectDB;
   const db = client.db("nextforum")
   let result= await db.collection('post').find().toArray()
-  console.log(result)
-
 
   return (
-    <div>안녕하세용</div>
+    <div>게시판만들기</div>
   );
 }
