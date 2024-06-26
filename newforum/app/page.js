@@ -2,21 +2,25 @@ import { connectDB } from "@/util/database";
 // 자바스크립트 파일끼리는 .js 생략해도 무방
 import { MongoClient } from "mongodb";
 
-
 export default async function Home() {
   // mongodb 연결_DB 입출력 코드는 server component 안에서만 사용하기
   const client = await connectDB;
-  const db = client.db("nextforum")
-  let result= await db.collection('post').find().toArray()
+  const db = client.db("nextforum");
+  let result = await db.collection("post").find().toArray();
 
   return (
     <div>
-      <a href="/list">게시판만들기</a>
-      
-      <form action="api/time" method="POST">
-        <button>시간알려줘어어</button>
-      </form>
+      <div style={{ display: "block", padding:"300px" }}>
+        <div style={{marginBottom:'30px'}}>
+          <a href="/list">게시판만들기</a>
+        </div>
+        <div style={{marginBottom:'30px'}}>
+          <a href="/register">회원가입</a>
+        </div>
+        <form action="api/time" method="POST">
+          <button>시간알려줘어어</button>
+        </form>
+      </div>
     </div>
-    
   );
 }
