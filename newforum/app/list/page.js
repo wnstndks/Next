@@ -6,15 +6,18 @@ export default async function List() {
   let result = await db.collection("post").find().toArray();
 
   // 혼자 코드를 짜고 싶으면, 한글로 기능설명하고 코드로 번역하면 됨
-
+  console.log(result)
   return (
     <div className="list-bg">
       {result.map((a, i) => (
         <div className="list-item" key={i}>
-          <h4>{a.title}</h4>
+          <h4><a href={`../detail/${a._id}`}>{a.title}</a></h4>
           <p>{a.content}</p>
+          <p>1월 1일</p>
+  
         </div>
       ))}
     </div>
+
   );
 }
