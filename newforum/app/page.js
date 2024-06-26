@@ -10,6 +10,13 @@ export default async function Home() {
   let result= await db.collection('post').find().toArray()
 
   return (
-    <div><a href="/list">게시판만들기</a></div>
+    <div>
+      <a href="/list">게시판만들기</a>
+      
+      <form action="api/time" method="POST">
+        <button>시간알려줘어어</button>
+      </form>
+    </div>
+    
   );
 }
