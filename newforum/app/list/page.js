@@ -1,7 +1,7 @@
 import { connectDB } from "@/util/database";
 import Link from "next/link";
 import DetailLink from "./DetailLink";
-
+import WriteLink from './WirteLink';
 export default async function List() {
   const client = await connectDB; //await을 붙이면 자바스크립트는 넘어가지않고 잠깐 기다려줌
   const db = client.db("nextforum");
@@ -19,6 +19,11 @@ export default async function List() {
           <p>1월 1일</p>
         </div>
       ))}
+      {/* 글작성기능 만들기 1. 글작성페이지 필요 
+      2. 버튼 누르면 작성한 글 DB에 저장 - user들이 폼에 맞게 작성하도록 중간에 서버 하나 두기-3tier arcitect 
+      => 2 버튼 누르면 서버에 글 저장해달라고 부탁
+      3. 서버는 부탁받으면 검사해보고 DB에 저장*/}
+      <WriteLink/>
     </div>
 
   );
