@@ -47,7 +47,8 @@ export default function ListItem(props) {
             // })
             // fetch('/api/deletefetch?데이터이름-값')-> 입력시 데이터를 서버로 보낼수 있음
             // fetch('/api/deletefetch?name=kim&age=20')
-            fetch('/api/abc/어쩌구/KIM') // url 파라미터에 데이터입력시 서버로 전송도 가능
+            // fetch('/api/abc/어쩌구/KIM') // url 파라미터에 데이터입력시 서버로 전송도 가능
+            fetch(`api/deletefetch?id=${a._id}`)
           }}>🗑️</span>
         </div>
       ))}
