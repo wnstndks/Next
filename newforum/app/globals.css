@@ -57,3 +57,14 @@ button{
   border: none;
   border-radius: 5px;
 }
+
+/* 애니메이션 주려면 
+1. 애니메이션 동작전/동작후 스타일 결정
+2. 동작전은 opacity:1
+3. transition도 넣기
+3. 원할 때 애니메이션 동작 후 스타일 넣기 - ajax 끝난 후 넣고 싶음
+동작후는 opacity: 0*/
+.list-item{
+  opacity: 1;
+  transition: all 1s;
+}

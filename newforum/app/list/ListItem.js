@@ -29,18 +29,25 @@ export default function ListItem(props) {
           3. 발행누르면 DB에 있던 글 수정 */}
           <Link href={"/edit/" + a._id}>글 수정✏️</Link>
           {/* ajax 기능 사용해서 서버로 요청하기 */}
-          <span onClick={()=>{
+          <span onClick={(e)=>{
             // fetch('경로') -> 경로로 get요청 날림
             // 요청완료시 코드 실행은 .then()
             // post 요청은 fetch('경로',{'method':'POST', body:서버로 array object 자료보낼때는 - JSON.stringfy({})}) - data도 함께 전송해야하기에 body에 데이터 
-            fetch('/api/delete',{'method':'DELETE',body:a._id})
-            .then((r)=>{
-                // Ajax요청 완료시 코드 실행은
-                return r.json()
-            })
-            .then((r)=>{
-                console.log(r)
-            })
+            // fetch('/api/delete',{'method':'DELETE',body:a._id})
+            // .then((r)=>{
+            //     // Ajax요청 완료시 코드 실행은
+            //     return r.json()
+            // })
+            // // 서버로 데이터를 보내는 법 -fetch는 body에 넣기 - <form>은 <input>에 넣기
+            // .then((r)=>{
+            //     e.target.parentElement.style.opacity=0
+            //     setTimeout((()=>{
+            //       e.target.parentElement.style.display='none'
+            //     }),1000)
+            // })
+            // fetch('/api/deletefetch?데이터이름-값')-> 입력시 데이터를 서버로 보낼수 있음
+            // fetch('/api/deletefetch?name=kim&age=20')
+            fetch('/api/abc/어쩌구/KIM') // url 파라미터에 데이터입력시 서버로 전송도 가능
           }}>🗑️</span>
         </div>
       ))}
