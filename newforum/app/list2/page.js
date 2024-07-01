@@ -10,7 +10,7 @@ import ListItem from "./ListItem";
 
 // 다이나믹 랜더링으로 바꾸려면 예약된 변수를 만들고
 
-export const revalidate = 20; //누가 페이지 방문시 60초동안 서버에서 html을 다시 그리지않고 미리 캐싱된 결과를 보여줌 - 
+export const revalidate = 20; //누가 페이지 방문시 20초동안 서버에서 html을 다시 그리지않고 미리 캐싱된 결과를 보여줌 - 
 
 // export default async function Home(){
 //   // 결과 몰래 저장해두고 그거를 쓰게 됨
@@ -19,6 +19,7 @@ export const revalidate = 20; //누가 페이지 방문시 60초동안 서버에
 //   // 
 //   await fetch('/URL',{cache : 'force-cache'})
 // }
+// 캐싱기능 사용하려면 npm run build 후 npm run start
 
 
 
