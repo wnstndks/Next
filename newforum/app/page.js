@@ -18,7 +18,7 @@ export default async function Home() {
           <a href="/register">회원가입</a>
         </div>
         <form action="api/time" method="POST">
-          <button>시간알려줘어어</button>
+          <button style={{cursor:'pointer'}}>시간알려줘어어</button>
         </form>
       </div>
     </div>

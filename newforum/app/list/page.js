@@ -22,10 +22,8 @@ export default async function Home(){
   // 서버를 저장해두고 자동으로 불러오게 됨 - fetch를 가져다 쓸때 그냥 {cache:'force-cache'}부분은 안써도 됨 -아무튼 이러면 매번 서버로 요청해서 새거를 가져오게 됨
   // 만약 next: revalidate: 60을 쓰면 이러면 60초마다 캐싱된 데이터 갱신해줌 - 일초단위의 실시간 데이터가 필요없는 경우 많이 사용 - 캐시된 데이터는 하드용량 차지함
   // 
-  await fetch('/URL',{cache : 'force-cache'})
+  await fetch('/',{cache : 'force-cache'})
 }
-
-
 
 // export default async function List() {
 //   const client = await connectDB; //await을 붙이면 자바스크립트는 넘어가지않고 잠깐 기다려줌
