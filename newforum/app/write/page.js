@@ -2,6 +2,10 @@ import Link from "next/link";
 
 // 서버로 POST method 요청하려면 -form 태그 사용
 export default function Write() {
+
+  // if (유저세션출력해서 아무것도없으면){
+  //   return <div>로그인하세요</div>
+  // }
   return (
     <div>
       <h4>글 작성할거냐</h4>
