@@ -8,7 +8,7 @@ export default async function handler(요청, 응답){
       console.log(요청.body)
       let session = await getServerSession(요청, 응답, authOptions)
     // JSON->object 변환은 JSON.parse()
-      const db = (await connectDB).db('forum')
+      const db = (await connectDB).db('nextforum')
       let 찾은거 = await db.collection('post').findOne({ _id : new ObjectId(요청.body) })
   
       if (찾은거.author == session.user.email) {

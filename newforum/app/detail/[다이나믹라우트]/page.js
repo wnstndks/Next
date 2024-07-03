@@ -3,6 +3,7 @@
 
 import { connectDB } from "@/util/database";
 import { ObjectId } from "mongodb";
+import Comment from "./Comment";
 
 
 export default async function Detail(props) {
@@ -19,7 +20,8 @@ export default async function Detail(props) {
       <h4>상세페이지</h4>
       <h5>{result.title}</h5>
       <p>{result.content}</p>
-
+      {/* ajax가 필요하기에 client component가 필요함 */}
+      <Comment _id={result._id.toString()}/>
 
     </div>
   );
