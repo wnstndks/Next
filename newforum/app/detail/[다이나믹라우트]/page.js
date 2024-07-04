@@ -21,6 +21,7 @@ export default async function Detail(props) {
       <h5>{result.title}</h5>
       <p>{result.content}</p>
       {/* ajax가 필요하기에 client component가 필요함 */}
+      {/* comment라는 컴포넌트안에서 댓글 보여주고 싶음 -client componet안에서 직접 댓글 가져오기*/}
       <Comment _id={result._id.toString()}/>
 
     </div>
