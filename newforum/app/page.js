@@ -10,7 +10,7 @@ export default async function Home() {
 
   return (
     <div>
-      <div style={{ display: "block", padding:"300px" }}>
+      <div style={{ padding:"30px" }}>
         <div style={{marginBottom:'30px'}}>
           <a href="/list">게시판만들기</a>
         </div>

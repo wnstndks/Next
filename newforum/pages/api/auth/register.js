@@ -14,7 +14,7 @@ export default async function resigterhandler(요청,응답){
                 let hash=await bcrypt.hash(요청.body.pw,10)
                 요청.body.pw=hash
                 let newresult = await db.collection("user_cred").insertOne(요청.body);
-                return 응답.status(200).json('회원가입성공') 
+                응답.status(200).redirect('/')
             }else{
                 return 응답.status(500).json('회원있다임마 다시 입력해라마')
             }

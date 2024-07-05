@@ -34,7 +34,7 @@ export default async function List() {
   let result = await db.collection("post").find().toArray();
 
   // 혼자 코드를 짜고 싶으면, 한글로 기능설명하고 코드로 번역하면 됨
-  console.log(result);
+  // console.log(result);
   return (
     <ListItem result={result}/>
   );
