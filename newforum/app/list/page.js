@@ -1,6 +1,7 @@
 // 'use client'
 // 큰페이지는 서버컴포넌트
 // 필요한부분만 클라이언트컴포넌트
+// 서버사이드의 단점 : 페이지를 이동할 때 새로고침이 됨
 import { connectDB } from "@/util/database";
 import Link from "next/link";
 import DetailLink from "./DetailLink";
